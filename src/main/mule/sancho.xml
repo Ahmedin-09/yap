@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="9e947f97-3d25-4a5a-9a4f-1278feee0689" >
+		<http:listener-connection host="0.0.0.0" port="8081" />
+	</http:listener-config>
+	<flow name="sanchoFlow" doc:id="a3ec986e-cdcb-4196-a6c6-7c6ac2c72927" >
+		<http:listener doc:name="Listener" doc:id="40c2f278-fffe-48e9-a4dc-c148816907e2" config-ref="HTTP_Listener_config" path="/sa"/>
+		<set-payload value="payload ya" doc:name="Set Payload" doc:id="f0cd4058-e689-47cb-aa68-73b03aca83de" />
+	</flow>
+</mule>
