@@ -26,6 +26,20 @@
 				<version>${mule.maven.plugin.version}</version>
 				<extensions>true</extensions>
 				<configuration>
+				
+				 <cloudHubDeployment>
+		          <username>Ahmedin01</username> 
+		          <password>Ahmedin03</password> 
+		          <applicationName>git-junkins-demo</applicationName>
+		          <environment>Sandbox</environment>
+		          <workerType>Micro</workerType>
+		          <workers>1</workers>
+		          <muleVersion>4.2.2</muleVersion> 
+		          <region>us-east-2</region>
+		          <objectStoreV2>true</objectStoreV2>
+		        </cloudHubDeployment> 
+				
+				
 				</configuration>
 			</plugin>
 		</plugins>
